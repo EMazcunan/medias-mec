@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0" />
+<title>Diagrama de caja y bigotes</title>
+<meta charset='utf-8' />
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link rel='stylesheet' type='text/css' href='practica3-mec.css' />
+<meta content='practica3-mec.tex' name='src' />
+<script type='text/javascript' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' async='async'>
+</script>
+</head>
+<body>
+<nav class='breadcrumbs-bar'><span><a href='practica3-mec3.html'>Inicio</a> &gt;&nbsp;3&nbsp;<a href='practica3-mecse3.html#x6-30003'>Gráficos</a> &gt;&nbsp;3.2&nbsp;<a href='#x8-50003.2'>Diagrama de caja y bigotes</a></span></nav>
+<nav class='controls-bar'>
+<nav class='prev'><a href='practica3-mecsu1.html'><span>❮</span></a></nav>
+<nav class='next'><a href='practica3-mecse4.html'><span>❯</span></a></nav>
+</nav>
+<h4 class='subsectionHead'><span class='titlemark'>3.2</span> <a href='practica3-mec2.html#QQ2-8-5' id='x8-50003.2'><span class='fakebreadcrumbs'> </span></a><span class='fakebreadcrumbs'> </span>Diagrama de caja y bigotes</h4>
+<!-- l. 363 -->
+<p class='noindent'>Ahora vamos a representar los datos mediante un gráfico que se denomina <b>diagrama de caja y bigotes</b>. Copia el siguiente código en tu script y ejecútalo para dibujar el diagrama de caja y bigotes asociado a nuestras <!-- l. 366 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mediciones:</p>
+<div class='mdframed' id='mdframed-8'><!-- l. 369 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb7'><a id='x8-5002r1'></a><span id='textcolor30'><b>ggplot</b></span><span class='ec-lmtt-12'>(</span><br class='fancyvrb' />
+<a id='x8-5004r2'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor31'><span class='ec-lmtt-12'>data&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;datos,</span><br class='fancyvrb' />
+<a id='x8-5006r3'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor32'><span class='ec-lmtt-12'>mapping&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor33'><b>aes</b></span><span class='ec-lmtt-12'>(</span><br class='fancyvrb' />
+<a id='x8-5008r4'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor34'><span class='ec-lmtt-12'>x&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor35'><b>factor</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor36'><span class='ec-lmtt-12'>1</span></span><span class='ec-lmtt-12'>),</span><br class='fancyvrb' />
+<a id='x8-5010r5'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor37'><span class='ec-lmtt-12'>y&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;alcance</span><br class='fancyvrb' />
+<a id='x8-5012r6'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;)</span><br class='fancyvrb' />
+<a id='x8-5014r7'></a><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor38'><b>+</b></span><br class='fancyvrb' />
+<a id='x8-5016r8'></a><span id='textcolor39'><b>geom_boxplot</b></span><span class='ec-lmtt-12'>(</span><br class='fancyvrb' />
+<a id='x8-5018r9'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;</span><span id='textcolor40'><span class='ec-lmtt-12'>fill&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor41'><span class='ec-lmtt-12'>"#08C9F9"</span></span><span class='ec-lmtt-12'>,</span><br class='fancyvrb' />
+<a id='x8-5020r10'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;</span><span id='textcolor42'><span class='ec-lmtt-12'>outlier.colour&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor43'><span class='ec-lmtt-12'>"red"</span></span><span class='ec-lmtt-12'>,</span><br class='fancyvrb' />
+<a id='x8-5022r11'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;</span><span id='textcolor44'><span class='ec-lmtt-12'>outlier.size&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor45'><span class='ec-lmtt-12'>2</span></span><span class='ec-lmtt-12'>,</span><br class='fancyvrb' />
+<a id='x8-5024r12'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;</span><span id='textcolor46'><span class='ec-lmtt-12'>outlier.shape&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor47'><span class='ec-lmtt-12'>8</span></span><br class='fancyvrb' />
+<a id='x8-5026r13'></a><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor48'><b>+</b></span><br class='fancyvrb' />
+<a id='x8-5028r14'></a><span id='textcolor49'><b>xlab</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor50'><span class='ec-lmtt-12'>""</span></span><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor51'><b>+</b></span><br class='fancyvrb' />
+<a id='x8-5030r15'></a><span id='textcolor52'><b>ylab</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor53'><span class='ec-lmtt-12'>"Alcance&nbsp;(metros)"</span></span><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor54'><b>+</b></span><span id='textcolor55'><span class='ec-lmtt-12'>&nbsp;</span></span><br class='fancyvrb' />
+<a id='x8-5032r16'></a><span id='textcolor56'><b>scale_x_discrete</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor57'><span class='ec-lmtt-12'>breaks=</span></span><span id='textcolor58'><span class='ec-lmtt-12'>NULL</span></span><span class='ec-lmtt-12'>)&nbsp;</span></div>
+</div>
+<div class='center'><!-- l. 389 -->
+<p class='noindent'></p>
+<!-- l. 389 -->
+<p class='noindent'><img alt='pict' src='practica3-mec_files/figure-latex/unnamed-chunk-14-1.png' style='width:32.5em' /></p>
+</div>
+<!-- l. 391 -->
+<p class='noindent'>De nuevo, no es necesario que entiendas el código anterior en su totalidad. Es suficiente con saber qué elementos del código anterior habría que modificar para crear el diagrama de caja y bigotes para otros datos, que son:</p>
+<ul class='itemize1'>
+<li class='itemize'>En los argumentos de la función <span class='texttt'>ggplot</span>:
+<ul class='itemize2'>
+<li class='itemize'>En el fragmento <span class='texttt'>data&nbsp;=&nbsp;datos</span>, cambiar <span class='texttt'>datos</span> por el nombre de la hoja de datos en cuestión.</li>
+<li class='itemize'>En el fragmento <span class='texttt'>y&nbsp;=&nbsp;alcance</span>, cambiar <span class='texttt'>alcance</span> por el nombre de la variable de interés.</li>
+</ul>
+</li>
+<li class='itemize'>En el argumento de <span class='texttt'>ylab</span> cambiar el texto por el que se desee para rotular el eje vertical.</li>
+</ul>
+<!-- l. 415 -->
+<p class='noindent'>Pasamos ahora a explicar cómo se construye e interpreta el diagrama de caja y bigotes que hemos dibujado.</p>
+<h5 class='subsubsectionHead'><span class='titlemark'>3.2.1</span> <a href='practica3-mecse3.html#QQ2-8-6' id='x8-60003.2.1'><span class='fakebreadcrumbs'> </span></a><span class='fakebreadcrumbs'> </span>Caja</h5>
+<!-- l. 420 -->
+<p class='noindent'>La caja central coloreada se construye con los valores de:</p>
+<ul class='itemize1'>
+<li class='itemize'>el <b>primer cuartil</b>, que es valor que, en la secuencia ordenada de valores de menor a mayor, deja por debajo el <!-- l. 426 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>25</mn>
+<mi>%</mi>
+</mrow>
+</math> de los datos (y por arriba el <!-- l. 427 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>75</mn>
+<mi>%</mi>
+</mrow>
+</math> restante),</li>
+<li class='itemize'>el <b>segundo cuartil</b> o <b>mediana</b>, que es valor que, en la secuencia ordenada de valores, deja por debajo el <!-- l. 430 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+<mi>%</mi>
+</mrow>
+</math> de los datos (y por arriba el otro <!-- l. 431 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+<mi>%</mi>
+</mrow>
+</math>),</li>
+<li class='itemize'>y el <b>tercer cuartil</b>, que es valor que, en la secuencia ordenada de valores, deja por debajo el <!-- l. 434 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>75</mn>
+<mi>%</mi>
+</mrow>
+</math> de los datos (y por arriba el <!-- l. 435 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>25</mn>
+<mi>%</mi>
+</mrow>
+</math> restante).</li>
+</ul>
+<!-- l. 438 -->
+<p class='noindent'>Según las explicaciones anteriores, la caja coloreada del diagrama de caja y bigotes contiene el <!-- l. 439 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+<mi>%</mi>
+</mrow>
+</math> de los datos: el <!-- l. 439 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>25</mn>
+<mi>%</mi>
+</mrow>
+</math> en la mitad inferior de la caja, desde el primer cuartil hasta la mediana; y el <!-- l. 441 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>25</mn>
+<mi>%</mi>
+</mrow>
+</math> en la mitad superior, entre la mediana y el tercer cuartil.</p>
+<!-- l. 443 -->
+<p class='noindent'>Calculamos el primer cuartil, la mediana, y el tercer cuartil de nuestra muestra con la siguiente instrucción:</p>
+<div class='mdframed' id='mdframed-9'><!-- l. 447 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb8'><a id='x8-6002r1'></a><span id='textcolor59'><b>quantile</b></span><span class='ec-lmtt-12'>(muestra,&nbsp;</span><span id='textcolor60'><span class='ec-lmtt-12'>probs=</span></span><span id='textcolor61'><b>c</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor62'><span class='ec-lmtt-12'>0.25</span></span><span class='ec-lmtt-12'>,</span><span id='textcolor63'><span class='ec-lmtt-12'>0.5</span></span><span class='ec-lmtt-12'>,</span><span id=
+'textcolor64'><span class='ec-lmtt-12'>0.75</span></span><span class='ec-lmtt-12'>))</span></div>
+</div>
+<div class='verbatim' id='verbatim-1'>##&nbsp;&nbsp;&nbsp;25%&nbsp;&nbsp;&nbsp;50%&nbsp;&nbsp;&nbsp;75% &nbsp;<br />
+##&nbsp;44.55&nbsp;49.52&nbsp;54.66</div>
+<!-- l. 455 -->
+<p class='nopar'></p>
+<!-- l. 457 -->
+<p class='noindent'>El primer cuartil resulta ser <!-- l. 457 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>44</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>55</mn>
+</mrow>
+</math>, la mediana <!-- l. 457 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>52</mn>
+</mrow>
+</math>, y el tercer cuartil <!-- l. 458 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>54</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>66</mn>
+</mrow>
+</math>. Veamos por ejemplo cómo se ha obtenido el valor <!-- l. 459 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>52</mn>
+</mrow>
+</math> para la mediana, que deja el <!-- l. 459 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+<mi>%</mi>
+</mrow>
+</math> de los datos por debajo y la otra mitad por arriba. En primer lugar ordenamos nuestros datos, de menor a mayor, con la orden:</p>
+<div class='mdframed' id='mdframed-10'><!-- l. 464 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb9'><a id='x8-6004r1'></a><span id='textcolor65'><b>sort</b></span><span class='ec-lmtt-12'>(muestra)</span></div>
+</div>
+<div class='verbatim' id='verbatim-2'>##&nbsp;&nbsp;&nbsp;[1]&nbsp;28.26&nbsp;29.78&nbsp;35.32&nbsp;36.08&nbsp;36.39&nbsp;36.74&nbsp;36.82&nbsp;37.01&nbsp;37.13&nbsp;37.24&nbsp;38.65 &nbsp;<br />
+##&nbsp;&nbsp;[12]&nbsp;39.07&nbsp;39.88&nbsp;40.85&nbsp;40.85&nbsp;41.10&nbsp;41.25&nbsp;41.37&nbsp;42.36&nbsp;42.60&nbsp;43.15&nbsp;43.26 &nbsp;<br />
+##&nbsp;&nbsp;[23]&nbsp;43.38&nbsp;44.04&nbsp;44.47&nbsp;44.57&nbsp;44.58&nbsp;44.67&nbsp;44.82&nbsp;45.19&nbsp;45.23&nbsp;45.37&nbsp;45.39 &nbsp;<br />
+##&nbsp;&nbsp;[34]&nbsp;45.68&nbsp;45.76&nbsp;45.90&nbsp;45.99&nbsp;46.04&nbsp;46.07&nbsp;46.50&nbsp;46.56&nbsp;46.99&nbsp;47.12&nbsp;48.06 &nbsp;<br />
+##&nbsp;&nbsp;[45]&nbsp;48.14&nbsp;48.32&nbsp;48.79&nbsp;48.88&nbsp;49.35&nbsp;49.36&nbsp;49.68&nbsp;49.94&nbsp;49.96&nbsp;49.97&nbsp;50.12 &nbsp;<br />
+##&nbsp;&nbsp;[56]&nbsp;50.32&nbsp;50.52&nbsp;50.53&nbsp;50.56&nbsp;50.58&nbsp;50.76&nbsp;50.83&nbsp;51.04&nbsp;51.30&nbsp;51.74&nbsp;52.19 &nbsp;<br />
+##&nbsp;&nbsp;[67]&nbsp;52.37&nbsp;53.50&nbsp;53.58&nbsp;53.94&nbsp;54.22&nbsp;54.31&nbsp;54.42&nbsp;54.59&nbsp;54.59&nbsp;54.87&nbsp;55.05 &nbsp;<br />
+##&nbsp;&nbsp;[78]&nbsp;55.06&nbsp;55.23&nbsp;55.39&nbsp;55.52&nbsp;55.58&nbsp;56.12&nbsp;56.68&nbsp;56.79&nbsp;56.90&nbsp;56.98&nbsp;56.99 &nbsp;<br />
+##&nbsp;&nbsp;[89]&nbsp;57.01&nbsp;57.35&nbsp;57.59&nbsp;58.78&nbsp;58.96&nbsp;60.17&nbsp;60.18&nbsp;60.57&nbsp;60.85&nbsp;62.72&nbsp;65.00 &nbsp;<br />
+##&nbsp;[100]&nbsp;66.24</div>
+<!-- l. 480 -->
+<p class='nopar'></p>
+<!-- l. 482 -->
+<p class='noindent'>En la salida del comando anterior verás que:</p>
+<ul class='itemize1'>
+<li class='itemize'>el dato que ocupa la posición <!-- l. 486 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+</mrow>
+</math> en la secuencia de valores ordenados, es <!-- l. 487 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>36</mn>
+</mrow>
+</math> (recuerda que tienes que fijarte en los números entre corchetes al principio de cada línea de la salida para saber qué posición ocupa cada dato). Este valor deja <!-- l. 489 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+</mrow>
+</math> valores por debajo, y <!-- l. 490 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+</mrow>
+</math> por arriba.</li>
+<li class='itemize'>Y el dato que ocupa la posición <!-- l. 492 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>51</mn>
+</mrow>
+</math>, es <!-- l. 492 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>68</mn>
+</mrow>
+</math>. Deja <!-- l. 492 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+</mrow>
+</math> valores por debajo y <!-- l. 493 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+</mrow>
+</math> por arriba.</li>
+</ul>
+<!-- l. 496 -->
+<p class='noindent'>Así, ni <!-- l. 496 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>36</mn>
+</mrow>
+</math> (posición <!-- l. 496 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+</mrow>
+</math>), ni <!-- l. 496 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>68</mn>
+</mrow>
+</math> (posición <!-- l. 496 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>51</mn>
+</mrow>
+</math>), dejan justo la mitad de los datos por debajo y la otra mitad por arriba. La posición ideal para la mediana sería la posición <!-- l. 498 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>5</mn>
+</mrow>
+</math>. Por esta razón, el cálculo que hace <span class='texttt'>R</span> para obtener la mediana es</p>
+<table class='equation-star'>
+<tr>
+<td><!-- l. 499 --><math display='block' xmlns='http://www.w3.org/1998/Math/MathML' class='equation'>
+<mfrac>
+<mrow>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>36</mn>
+<mo class='MathClass-bin'>+</mo>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>68</mn>
+</mrow>
+<mrow>
+<mn>2</mn>
+</mrow>
+</mfrac>
+<mo class='MathClass-rel'>=</mo>
+<mn>49</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>52</mn>
+<mo class='MathClass-punc'>,</mo>
+</math></td>
+</tr>
+</table>
+<!-- l. 501 -->
+<p class='noindent'>la media aritmética entre el dato de la posición <!-- l. 501 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>50</mn>
+</mrow>
+</math> y el de la posición <!-- l. 502 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>51</mn>
+</mrow>
+</math>.</p>
+<h5 class='subsubsectionHead'><span class='titlemark'>3.2.2</span> <a href='practica3-mecse3.html#QQ2-8-7' id='x8-70003.2.2'><span class='fakebreadcrumbs'> </span></a><span class='fakebreadcrumbs'> </span>Bigotes y outliers</h5>
+<!-- l. 506 -->
+<p class='noindent'>Queda por explicar qué significan los <b>“bigotes”</b>, que son las líneas verticales por encima y debajo de la caja central, y por qué aparece resaltado un valor con un asterisco rojo por debajo del bigote inferior.</p>
+<!-- l. 511 -->
+<p class='noindent'>El propósito de los bigotes es resaltar los datos extremos, muy pequeños, o muy grandes, que se denominan <b>outliers</b>. En nuestro gráfico los outliers aparecen resaltados con un asterisco rojo. Datos por debajo del bigote inferior son catalogados como outliers por ser atípicamente pequeños, y datos por encima del bigote superior son considerados outliers por atípicamente grandes. Vemos que en nuestra muestra ha aparecido un oulier por debajo del bigote inferior, que, mirando la
+escala del eje <!-- l. 518 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>Y</mi>
+</mrow>
+</math>, vemos que tiene un valor menor que <!-- l. 519 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>30</mn>
+</mrow>
+</math>. Concretamente, se trata del valor mínimo <!-- l. 519 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>28</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>26</mn>
+</mrow>
+</math> que apareció en primer lugar cuando ordenamos los datos de menor a mayor, y que podemos ver directamente calculando el mínimo:</p>
+<div class='mdframed' id='mdframed-11'><!-- l. 524 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb10'><a id='x8-7002r1'></a><span id='textcolor66'><b>min</b></span><span class='ec-lmtt-12'>(muestra)</span></div>
+</div>
+<div class='verbatim' id='verbatim-3'>##&nbsp;[1]&nbsp;28.26</div>
+<!-- l. 531 -->
+<p class='nopar'></p>
+<!-- l. 533 -->
+<p class='noindent'>Los datos extremos u outliers pueden ser datos erróneos (debidos a errores en las mediciones, en la transcripción de los datos al fichero <!-- l. 535 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi class='MathClass-op'>…</mi>
+<mo>⁡<!-- FUNCTION APPLICATION --></mo>
+</mrow>
+</math>). Pero también pueden ser datos correctos que, aun teniendo poca probabilidad de aparecer, han aparecido por azar en nuestra muestra. Aunque es una práctica frecuente desechar los outliers sistemáticamente, no es en absoluto una práctica recomendable. De hecho los outliers pueden ser lo más interesante de la muestra. La historia más famosa sobre las posibles consecuencias de la eliminación automática de outliers está relacionada con la detección del agujero de ozono. En 1985 se publicó el estudio
+mostrando que los niveles de ozono en la Antártida habían caído un <!-- l. 543 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>10</mn>
+<mi>%</mi>
+</mrow>
+</math> por debajo de lo normal. Se descubrió entonces que las mediciones inusualmente bajas del nivel de ozono ya habían sido registradas por el satélite Nimbus-7 de la NASA en 1976, pero que dichas mediciones fueron ignoradas al ser procesadas mediante un programa informático que descartaba automáticamente los valores excesivamente pequeños, como si se tratara de errores. De no ser por este tratamiento inadecuado de los outliers, el agujero de ozono podría haberse detectado casi una década antes.</p>
+<!-- l. 552 -->
+<p class='noindent'>Veamos cómo se dibujan los bigotes para decidir qué datos son outliers. En primer lugar se calcula la diferencia entre tercer cuartil y primer cuartil (que es la anchura de la caja y se denomina <b>rango intercuartílico</b>) y se multiplica por <!-- l. 555 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>1</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>5</mn>
+</mrow>
+</math>. En nuestro caso, esta cantidad queda</p>
+<table class='equation-star'>
+<tr>
+<td><!-- l. 556 --><math display='block' xmlns='http://www.w3.org/1998/Math/MathML' class='equation'>
+<mn>1</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>5</mn>
+<mrow>
+<mo class='MathClass-open'>(</mo>
+<mrow>
+<mn>54</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>66</mn>
+<mo class='MathClass-bin'>−</mo>
+<mn>44</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>55</mn>
+</mrow>
+<mo class='MathClass-close'>)</mo>
+</mrow>
+<mo class='MathClass-rel'>=</mo>
+<mn>15</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>17</mn>
+<mo class='MathClass-punc'>.</mo>
+</math></td>
+</tr>
+</table>
+<!-- l. 560 -->
+<p class='noindent'>Se catalogan como outliers aquellos valores que disten de los bordes de la caja central más de la cantidad anterior. En nuestro caso, serán outliers los valores inferiores a</p>
+<table class='equation-star'>
+<tr>
+<td><!-- l. 562 --><math display='block' xmlns='http://www.w3.org/1998/Math/MathML' class='equation'>
+<mn>44</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>55</mn>
+<mo class='MathClass-bin'>−</mo>
+<mn>15</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>17</mn>
+<mo class='MathClass-rel'>=</mo>
+<mn>29</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>37</mn>
+</math></td>
+</tr>
+</table>
+<!-- l. 564 -->
+<p class='noindent'>y los superiores a</p>
+<table class='equation-star'>
+<tr>
+<td><!-- l. 564 --><math display='block' xmlns='http://www.w3.org/1998/Math/MathML' class='equation'>
+<mn>54</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>66</mn>
+<mo class='MathClass-bin'>+</mo>
+<mn>15</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>17</mn>
+<mo class='MathClass-rel'>=</mo>
+<mn>69</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>83</mn>
+<mo class='MathClass-punc'>.</mo>
+</math></td>
+</tr>
+</table>
+<!-- l. 566 -->
+<p class='noindent'>El bigote inferior se extiende hasta el menor dato que no es considerado outlier. Y el bigote superior se extiende hasta el mayor dato que no es considerado outlier. Los datos por debajo y por arriba de los bigotes se clasifican como outliers y en nuestro caso se representan con un asterisco rojo.</p>
+<!-- l. 572 -->
+<p class='noindent'>Miremos de nuevo la secuencia ordenada para nuestros <!-- l. 572 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> datos:</p>
+<div class='mdframed' id='mdframed-12'><!-- l. 575 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb11'><a id='x8-7004r1'></a><span id='textcolor67'><b>sort</b></span><span class='ec-lmtt-12'>(muestra)</span></div>
+</div>
+<div class='verbatim' id='verbatim-4'>##&nbsp;&nbsp;&nbsp;[1]&nbsp;28.26&nbsp;29.78&nbsp;35.32&nbsp;36.08&nbsp;36.39&nbsp;36.74&nbsp;36.82&nbsp;37.01&nbsp;37.13&nbsp;37.24&nbsp;38.65 &nbsp;<br />
+##&nbsp;&nbsp;[12]&nbsp;39.07&nbsp;39.88&nbsp;40.85&nbsp;40.85&nbsp;41.10&nbsp;41.25&nbsp;41.37&nbsp;42.36&nbsp;42.60&nbsp;43.15&nbsp;43.26 &nbsp;<br />
+##&nbsp;&nbsp;[23]&nbsp;43.38&nbsp;44.04&nbsp;44.47&nbsp;44.57&nbsp;44.58&nbsp;44.67&nbsp;44.82&nbsp;45.19&nbsp;45.23&nbsp;45.37&nbsp;45.39 &nbsp;<br />
+##&nbsp;&nbsp;[34]&nbsp;45.68&nbsp;45.76&nbsp;45.90&nbsp;45.99&nbsp;46.04&nbsp;46.07&nbsp;46.50&nbsp;46.56&nbsp;46.99&nbsp;47.12&nbsp;48.06 &nbsp;<br />
+##&nbsp;&nbsp;[45]&nbsp;48.14&nbsp;48.32&nbsp;48.79&nbsp;48.88&nbsp;49.35&nbsp;49.36&nbsp;49.68&nbsp;49.94&nbsp;49.96&nbsp;49.97&nbsp;50.12 &nbsp;<br />
+##&nbsp;&nbsp;[56]&nbsp;50.32&nbsp;50.52&nbsp;50.53&nbsp;50.56&nbsp;50.58&nbsp;50.76&nbsp;50.83&nbsp;51.04&nbsp;51.30&nbsp;51.74&nbsp;52.19 &nbsp;<br />
+##&nbsp;&nbsp;[67]&nbsp;52.37&nbsp;53.50&nbsp;53.58&nbsp;53.94&nbsp;54.22&nbsp;54.31&nbsp;54.42&nbsp;54.59&nbsp;54.59&nbsp;54.87&nbsp;55.05 &nbsp;<br />
+##&nbsp;&nbsp;[78]&nbsp;55.06&nbsp;55.23&nbsp;55.39&nbsp;55.52&nbsp;55.58&nbsp;56.12&nbsp;56.68&nbsp;56.79&nbsp;56.90&nbsp;56.98&nbsp;56.99 &nbsp;<br />
+##&nbsp;&nbsp;[89]&nbsp;57.01&nbsp;57.35&nbsp;57.59&nbsp;58.78&nbsp;58.96&nbsp;60.17&nbsp;60.18&nbsp;60.57&nbsp;60.85&nbsp;62.72&nbsp;65.00 &nbsp;<br />
+##&nbsp;[100]&nbsp;66.24</div>
+<!-- l. 591 -->
+<p class='nopar'></p>
+<!-- l. 593 -->
+<p class='noindent'>El único dato catalogado como outlier es <!-- l. 593 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>28</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>26</mn>
+</mrow>
+</math>, por eso el bigote izquierdo se extiende hasta <!-- l. 594 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>29</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>78</mn>
+</mrow>
+</math> (el mínimo no outlier) y el bigote derecho hasta <!-- l. 595 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>66</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>24</mn>
+</mrow>
+</math> (el máximo, no outlier).</p>
+<!-- l. 597 -->
+<p class='noindent'></p>
+<div style='height:3em; width:10px; clear:both;'></div>
+</body>
+</html>

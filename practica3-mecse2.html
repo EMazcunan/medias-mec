@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0" />
+<title>Media muestral</title>
+<meta charset='utf-8' />
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link rel='stylesheet' type='text/css' href='practica3-mec.css' />
+<meta content='practica3-mec.tex' name='src' />
+<script type='text/javascript' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' async='async'>
+</script>
+</head>
+<body>
+<nav class='breadcrumbs-bar'><span><a href='practica3-mec3.html'>Inicio</a> &gt;&nbsp;2&nbsp;<a href='#x5-20002'>Media muestral</a></span></nav>
+<nav class='controls-bar'>
+<nav class='prev'><a href='practica3-mecse1.html'><span>❮</span></a></nav>
+<nav class='next'><a href='practica3-mecse3.html'><span>❯</span></a></nav>
+</nav>
+<h3 class='sectionHead'><span class='titlemark'>2</span> <a href='practica3-mec2.html#QQ2-5-2' id='x5-20002'><span class='fakebreadcrumbs'> </span></a><span class='fakebreadcrumbs'> </span>Media muestral</h3>
+<!-- l. 201 -->
+<p class='noindent'>Comenzamos importando el archivo <span class='texttt'>mandos.csv</span> con el radio de alcance de los <!-- l. 202 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos analizados. Para ello, en primer lugar, haz del directorio en el que hayas descargado el archivo <span class='texttt'>mandos.csv</span> y hayas guardado el script tu directorio de trabajo, con el menú</p>
+<div class='center'><!-- l. 207 -->
+<p class='noindent'></p>
+<!-- l. 208 -->
+<p class='noindent'>‘Session &gt; Set Working Directory &gt; to Source File Location‘.</p>
+</div>
+<!-- l. 211 -->
+<p class='noindent'>Después ejecuta la instrucción siguiente</p>
+<div class='mdframed' id='mdframed-2'><!-- l. 214 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb1'><a id='x5-2002r1'></a><span class='ec-lmtt-12'>datos&nbsp;&lt;-</span><span id='textcolor1'><span class='ec-lmtt-12'>&nbsp;</span></span><span id='textcolor2'><b>read.csv</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor3'><span class='ec-lmtt-12'>"mandos.csv"</span></span><span class='ec-lmtt-12'>)</span></div>
+</div>
+<!-- l. 219 -->
+<p class='noindent'>que creará la hoja de datos <span class='texttt'>datos</span> con los contenidos del archivo <span class='texttt'>mandos.csv</span>.</p>
+<!-- l. 222 -->
+<p class='noindent'>Veamos ahora el contenido de la hoja de datos creada:</p>
+<div class='mdframed' id='mdframed-3'><!-- l. 225 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb2'><a id='x5-2004r1'></a><span id='textcolor4'><b>View</b></span><span class='ec-lmtt-12'>(datos)</span></div>
+</div>
+<!-- l. 230 -->
+<p class='noindent'>Al ejecutar la instrucción anterior verás que la hoja de datos tiene una única variable, de nombre <span class='texttt'>alcance</span>, en la que se registra el radio de alcance medido para cada uno de los <!-- l. 232 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos analizados.</p>
+<!-- l. 234 -->
+<p class='noindent'>Extraemos la variable <span class='texttt'>alcance</span> y la almacenamos en un vector de nombre <span class='texttt'>muestra</span>, con la siguiente instrucción:</p>
+<div class='mdframed' id='mdframed-4'><!-- l. 238 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb3'><a id='x5-2006r1'></a><span class='ec-lmtt-12'>muestra&nbsp;&lt;-</span><span id='textcolor5'><span class='ec-lmtt-12'>&nbsp;</span></span><span class='ec-lmtt-12'>datos</span><span id='textcolor6'><b>$</b></span><span class='ec-lmtt-12'>alcance</span></div>
+</div>
+<!-- l. 243 -->
+<p class='noindent'>Para ver el vector creado escribe <span class='texttt'>print(muestra)</span> o simplemente <span class='texttt'>muestra</span>.</p>
+<!-- l. 246 -->
+<p class='noindent'>Una forma natural de estimar el valor de la media teórica <!-- l. 246 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math> es calcular la media aritmética o promedio del radio de alcance de los <!-- l. 248 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos analizados. Para ello usamos la función <span class='texttt'>mean</span>:</p>
+<div class='mdframed' id='mdframed-5'><!-- l. 251 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb4'><a id='x5-2008r1'></a><span id='textcolor7'><b>mean</b></span><span class='ec-lmtt-12'>(muestra)</span></div>
+</div>
+<!-- l. 256 -->
+<p class='noindent'>[1] 48.89</p>
+<!-- l. 258 -->
+<p class='noindent'>Vemos como salida del comando anterior que el radio de alcance medio para nuestra muestra de <!-- l. 259 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos es <!-- l. 259 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>48</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>89</mn>
+</mrow>
+</math>. Este valor se denomina <b>media muestral</b> y suele denotarse <!-- l. 260 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mover accent='false' class='mml-overline'>
+<mrow>
+<mi>x</mi>
+</mrow>
+<mo accent='true'>¯</mo>
+</mover>
+</mrow>
+</math>, de forma que escribiríamos</p>
+<table class='equation-star'>
+<tr>
+<td><!-- l. 261 --><math display='block' xmlns='http://www.w3.org/1998/Math/MathML' class='equation'>
+<mover accent='false' class='mml-overline'>
+<mrow>
+<mi>x</mi>
+</mrow>
+<mo accent='true'>¯</mo>
+</mover>
+<mo class='MathClass-rel'>=</mo>
+<mn>48</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>89</mn>
+<mo class='MathClass-punc'>.</mo>
+</math></td>
+</tr>
+</table>
+<!-- l. 263 -->
+<p class='noindent'>La media muestral <!-- l. 263 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mover accent='false' class='mml-overline'>
+<mrow>
+<mi>x</mi>
+</mrow>
+<mo accent='true'>¯</mo>
+</mover>
+<mo class='MathClass-rel'>=</mo>
+<mn>48</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>89</mn>
+</mrow>
+</math> nos proporciona una estimación de <!-- l. 264 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math>, que se llama a su vez <b>media poblacional</b>. Pero hay que tener claro que el verdadero valor de <!-- l. 265 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math> sigue siendo desconocido:</p>
+<ul class='itemize1'>
+<li class='itemize'>El verdadero valor de <!-- l. 270 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math> es la media o valor esperado de la variable aleatoria <!-- l. 271 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>X</mi>
+</mrow>
+</math>. Según hemos estudiado en la teoría, identificamos <!-- l. 272 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math> con el valor medio teórico del radio de alcance de todos los mandos fabricados por la empresa, con el valor límite al que tendería el alcance promedio de <!-- l. 274 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>n</mi>
+</mrow>
+</math> mandos cuando <!-- l. 274 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>n</mi>
+</mrow>
+</math> tiende a infinito.</li>
+<li class='itemize'>Por su parte, el valor <!-- l. 277 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mover accent='false' class='mml-overline'>
+<mrow>
+<mi>x</mi>
+</mrow>
+<mo accent='true'>¯</mo>
+</mover>
+<mo class='MathClass-rel'>=</mo>
+<mn>48</mn>
+<mo class='MathClass-punc'>.</mo>
+<mn>89</mn>
+</mrow>
+</math> es tan sólo el radio de alcance promedio de los <!-- l. 278 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos que hemos observado.</li>
+</ul>
+<!-- l. 281 -->
+<p class='noindent'>Podría ser que <!-- l. 281 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+<mo class='MathClass-rel'>=</mo>
+<mn>53</mn>
+</mrow>
+</math>, en cuyo caso los <!-- l. 281 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos observados tendrían un radio de alcance promedio inferior a la media teórica <!-- l. 283 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math>. Y de la misma forma podría ser <!-- l. 283 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+<mo class='MathClass-rel'>=</mo>
+<mn>45</mn>
+</mrow>
+</math>, y que hayamos observado por azar <!-- l. 284 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>100</mn>
+</mrow>
+</math> mandos con radio de alcance promedio superior a la media teórica <!-- l. 285 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>μ</mi>
+</mrow>
+</math>.</p>
+<!-- l. 287 -->
+<p class='noindent'></p>
+<div style='height:3em; width:10px; clear:both;'></div>
+</body>
+</html>

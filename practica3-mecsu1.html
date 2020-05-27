@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0" />
+<title>Histograma</title>
+<meta charset='utf-8' />
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+<meta content='width=device-width,initial-scale=1' name='viewport' />
+<link rel='stylesheet' type='text/css' href='practica3-mec.css' />
+<meta content='practica3-mec.tex' name='src' />
+<script type='text/javascript' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' async='async'>
+</script>
+</head>
+<body>
+<nav class='breadcrumbs-bar'><span><a href='practica3-mec3.html'>Inicio</a> &gt;&nbsp;3&nbsp;<a href='practica3-mecse3.html#x6-30003'>Gráficos</a> &gt;&nbsp;3.1&nbsp;<a href='#x7-40003.1'>Histograma</a></span></nav>
+<nav class='controls-bar'>
+<nav class='prev'><a href='practica3-mecse3.html'><span>❮</span></a></nav>
+<nav class='next'><a href='practica3-mecsu2.html'><span>❯</span></a></nav>
+</nav>
+<h4 class='subsectionHead'><span class='titlemark'>3.1</span> <a href='practica3-mec2.html#QQ2-7-4' id='x7-40003.1'><span class='fakebreadcrumbs'> </span></a><span class='fakebreadcrumbs'> </span>Histograma</h4>
+<!-- l. 300 -->
+<p class='noindent'>Comenzamos realizando un <b>histograma</b> para nuestros datos. Como en la práctica anterior, no es necesario que entiendas al detalle el siguiente código, sólo ejecútalo para ver el resultado. Luego lee las explicaciones posteriores, que son suficientes para saber cómo retocar el código para representar otros datos.</p>
+<div class='mdframed' id='mdframed-7'><!-- l. 307 -->
+<p class='noindent'></p>
+<div class='fancyvrb' id='fancyvrb6'><a id='x7-4002r1'></a><span id='textcolor9'><b>ggplot</b></span><span class='ec-lmtt-12'>(</span><br class='fancyvrb' />
+<a id='x7-4004r2'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor10'><span class='ec-lmtt-12'>data&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;datos,</span><br class='fancyvrb' />
+<a id='x7-4006r3'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor11'><span class='ec-lmtt-12'>mapping&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor12'><b>aes</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor13'><span class='ec-lmtt-12'>x&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;alcance)</span><br class='fancyvrb' />
+<a id='x7-4008r4'></a><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor14'><b>+</b></span><br class='fancyvrb' />
+<a id='x7-4010r5'></a><span id='textcolor15'><b>geom_histogram</b></span><span class='ec-lmtt-12'>(</span><br class='fancyvrb' />
+<a id='x7-4012r6'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor16'><span class='ec-lmtt-12'>binwidth&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor17'><span class='ec-lmtt-12'>5</span></span><span class='ec-lmtt-12'>,</span><br class='fancyvrb' />
+<a id='x7-4014r7'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor18'><span class='ec-lmtt-12'>colour&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor19'><span class='ec-lmtt-12'>"black"</span></span><span class='ec-lmtt-12'>,</span><br class='fancyvrb' />
+<a id='x7-4016r8'></a><span class='ec-lmtt-12'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span id='textcolor20'><span class='ec-lmtt-12'>fill&nbsp;=</span></span><span class='ec-lmtt-12'>&nbsp;</span><span id='textcolor21'><span class='ec-lmtt-12'>"#F98D08"</span></span><br class='fancyvrb' />
+<a id='x7-4018r9'></a><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor22'><b>+</b></span><span id='textcolor23'><span class='ec-lmtt-12'>&nbsp;</span></span><br class='fancyvrb' />
+<a id='x7-4020r10'></a><span id='textcolor24'><b>xlab</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor25'><span class='ec-lmtt-12'>"Alcance&nbsp;(metros)"</span></span><span class='ec-lmtt-12'>)&nbsp;</span><span id='textcolor26'><b>+</b></span><span id='textcolor27'><span class='ec-lmtt-12'>&nbsp;</span></span><br class='fancyvrb' />
+<a id='x7-4022r11'></a><span id='textcolor28'><b>ylab</b></span><span class='ec-lmtt-12'>(</span><span id='textcolor29'><span class='ec-lmtt-12'>"Recuento"</span></span><span class='ec-lmtt-12'>)</span></div>
+</div>
+<div class='center'><!-- l. 322 -->
+<p class='noindent'></p>
+<!-- l. 322 -->
+<p class='noindent'><img alt='pict' src='practica3-mec_files/figure-latex/histog-1.png' style='width:32.5em' /></p>
+</div>
+<!-- l. 324 -->
+<p class='noindent'>Como se explicó en la práctica anterior, la función <span class='texttt'>ggplot</span> determina la estructura del gráfico, creando el marco de partida para añadir el resto de elementos. En este caso crea un gráfico con los valores de la variable <span class='texttt'>alcance</span> en el eje <!-- l. 327 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>X</mi>
+</mrow>
+</math>.</p>
+<!-- l. 329 -->
+<p class='noindent'>Del eje <!-- l. 329 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>Y</mi>
+</mrow>
+</math> se ocupa la función <span class='texttt'>geom_histogram</span>. Esta función divide el eje <!-- l. 330 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mi>X</mi>
+</mrow>
+</math> en varios intervalos de la misma longitud, la indicada por el valor del argumento <span class='texttt'>binwidth</span>, en nuestro caso de longitud <!-- l. 332 --><math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow>
+<mn>5</mn>
+</mrow>
+</math>. Y para cada intervalo dibuja una barra de altura igual al número de observaciones que caen en ese intervalo.</p>
+<!-- l. 335 -->
+<p class='noindent'>Los elementos del código anterior que habría que cambiar para crear el histograma asociado otros datos son:</p>
+<ul class='itemize1'>
+<li class='itemize'>En los argumentos de la función <span class='texttt'>ggplot</span>:
+<ul class='itemize2'>
+<li class='itemize'>En el fragmento <span class='texttt'>data&nbsp;=&nbsp;datos</span>, cambiar <span class='texttt'>datos</span> por el nombre de la hoja de datos en cuestión.</li>
+<li class='itemize'>En el fragmento <span class='texttt'>x&nbsp;=&nbsp;alcance</span>, cambiar <span class='texttt'>alcance</span> por el nombre de la variable de interés.</li>
+</ul>
+</li>
+<li class='itemize'>En el fragmento <span class='texttt'>binwidth&nbsp;=&nbsp;5</span> en los argumentos de la función <span class='texttt'>geom_histogram</span>, cambiar el valor <span class='texttt'>5</span> por la anchura que se quiera para los intervalos.</li>
+<li class='itemize'>En los argumentos de las funciones <span class='texttt'>xlab</span> e <span class='texttt'>ylab</span> cambiar los textos por los que se quiera como rótulos de los ejes.</li>
+</ul>
+<!-- l. 360 -->
+<p class='noindent'></p>
+<div style='height:3em; width:10px; clear:both;'></div>
+</body>
+</html>
